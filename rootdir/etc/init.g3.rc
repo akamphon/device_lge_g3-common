@@ -494,12 +494,7 @@ service sensors /system/bin/sensors.qcom
     class late_start
     user root
     group root
-
-service timekeep /system/bin/timekeep restore
-   class late_start
-   user root
-   group root
-   oneshot
+    disabled
 
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
